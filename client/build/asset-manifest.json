@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/PowerPulse/static/css/main.c5a79f5e.css",
+    "main.js": "/PowerPulse/static/js/main.7fbb30b0.js",
+    "static/media/AuthImage.jpg": "/PowerPulse/static/media/AuthImage.4a89d3a73ccc9ead1b58.jpg",
+    "static/media/Logo.png": "/PowerPulse/static/media/Logo.3409443e8c39e6129898.png",
+    "index.html": "/PowerPulse/index.html",
+    "main.c5a79f5e.css.map": "/PowerPulse/static/css/main.c5a79f5e.css.map",
+    "main.7fbb30b0.js.map": "/PowerPulse/static/js/main.7fbb30b0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c5a79f5e.css",
+    "static/js/main.7fbb30b0.js"
+  ]
+}
