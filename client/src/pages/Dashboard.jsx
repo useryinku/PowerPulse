@@ -101,9 +101,13 @@ const Dashboard = () => {
         dashboardData();
         getTodaysWorkout();
         setButtonLoading(false);
+        alert("Workout added successfully!");
       })
       .catch((err) => {
-        alert(err);
+        setButtonLoading(false);
+        console.error("Error adding workout:", err);
+        const errorMessage = err.response?.data?.message || err.message || "Failed to add workout";
+        alert(`Error: ${errorMessage}`);
       });
   };
 

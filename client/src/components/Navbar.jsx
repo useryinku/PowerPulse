@@ -144,7 +144,8 @@ const Navbar = ({ currentUser }) => {
         <MobileMenu isOpen={isOpen}>
           <Navlink to="/">Dashboard</Navlink>
           <Navlink to="/workouts">Workouts</Navlink>
-          <Navlink to="/tutorials">Tutorials</Navlink>
+          <Navlink to="/calculator">Calorie Calculator</Navlink>
+          <Navlink to="/profile">Profile</Navlink>
           <Navlink to="/blogs">Blogs</Navlink>
           <Navlink to="/contact">Contact</Navlink>
         </MobileMenu>
@@ -152,7 +153,8 @@ const Navbar = ({ currentUser }) => {
         <NavItems>
           <Navlink to="/">Dashboard</Navlink>
           <Navlink to="/workouts">Workouts</Navlink>
-          <Navlink to="/tutorials">Tutorials</Navlink>
+          <Navlink to="/calculator">Calorie Calculator</Navlink>
+          <Navlink to="/profile">Profile</Navlink>
           <Navlink to="/blogs">Blogs</Navlink>
           <Navlink to="/contact">Contact</Navlink>
         </NavItems>

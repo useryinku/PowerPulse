@@ -32,7 +32,7 @@ app.get("/", async (req, res) => {
 const connectDB = () => {
   mongoose.set("strictQuery", true);
   mongoose
-    .connect("mongodb+srv://amrismail696969:Satamony@2024@cluster0.mongodb.net/<dbname>?retryWrites=true&w=majority")
+    .connect(process.env.MONGO_URI + "PowerPulse")
     .then(() => console.log("Connected to Mongo DB"))
     .catch((err) => {
       console.error("failed to connect with mongo");
@@ -43,6 +43,7 @@ const connectDB = () => {
 const startServer = async () => {
   try {
     connectDB();
+    const PORT = process.env.PORT || 8080;
     app.listen(8080, () => console.log("Server started on port 8080"));
   } catch (error) {
     console.log(error);

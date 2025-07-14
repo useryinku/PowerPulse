@@ -41,23 +41,30 @@ const SignUp = () => {
   };
 
   const handelSignUp = async () => {
-    setLoading(true);
-    setButtonDisabled(true);
-    if (validateInputs()) {
-      await UserSignUp({ name, email, password })
-        .then((res) => {
-          dispatch(loginSuccess(res.data));
-          alert("Account Created Success");
-          setLoading(false);
-          setButtonDisabled(false);
-        })
-        .catch((err) => {
+  setLoading(true);
+  setButtonDisabled(true);
+  if (validateInputs()) {
+    await UserSignUp({ name, email, password })
+      .then((res) => {
+        dispatch(loginSuccess(res.data));
+        alert("Account Created Success");
+        setLoading(false);
+        setButtonDisabled(false);
+      })
+      .catch((err) => {
+        // Better error handling
+        if (err.response && err.response.data && err.response.data.message) {
           alert(err.response.data.message);
-          setLoading(false);
-          setButtonDisabled(false);
-        });
-    }
-  };
+        } else {
+          alert("Network error or server is not running. Please check if the server is started.");
+          console.error("API Error:", err);
+        }
+        setLoading(false);
+        setButtonDisabled(false);
+      });
+  }
+};
+
   return (
     <Container>
       <div>
