@@ -37,6 +37,7 @@ function App() {
               <Route path="/profile" exact element={<UserProfile />} />
               <Route path="/calculator" exact element={<CalorieCalculator />} />
               <Route path="/blogs" exact element={<SocialFeed />} />
+              <Route path="/contact" exact element={<Contact />} />
             </Routes>
           </Container>
         ) : (

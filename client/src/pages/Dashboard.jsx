@@ -64,7 +64,6 @@ const CardWrapper = styled.div`
 `;
 
 const Dashboard = () => {
-  const [loading, setLoading] = useState(false);
   const [data, setData] = useState();
   const [buttonLoading, setButtonLoading] = useState(false);
   const [todaysWorkouts, setTodaysWorkouts] = useState([]);
@@ -75,21 +74,17 @@ const Dashboard = () => {
 -10 min`);
 
   const dashboardData = async () => {
-    setLoading(true);
     const token = localStorage.getItem("fittrack-app-token");
     await getDashboardDetails(token).then((res) => {
       setData(res.data);
       console.log(res.data);
-      setLoading(false);
     });
   };
   const getTodaysWorkout = async () => {
-    setLoading(true);
     const token = localStorage.getItem("fittrack-app-token");
     await getWorkouts(token, "").then((res) => {
       setTodaysWorkouts(res?.data?.todaysWorkouts);
       console.log(res.data);
-      setLoading(false);
     });
   };
 
