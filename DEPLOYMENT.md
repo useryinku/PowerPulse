@@ -66,6 +66,7 @@ If you encounter "git failed with exit code 128" or similar errors:
 
 2. **Verify Permissions:**
    - The updated workflow includes proper permissions for Pages deployment
+   - The workflow now includes the required `github-pages` environment configuration
    - No additional secrets or tokens needed
 
 3. **Alternative: Manual gh-pages Deployment:**
